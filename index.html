@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de Banca</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Gestão de Banca</h1>
+
+    <div id="login">
+      <h2>Login</h2>
+      <input id="email" type="email" placeholder="Email">
+      <input id="password" type="password" placeholder="Senha">
+      <button onclick="login()">Entrar</button>
+    </div>
+
+    <div id="dashboard" class="hidden">
+      <h2>Dashboard</h2>
+      <p>Banca Atual: R$ <span id="banca">0</span></p>
+
+      <h3>Nova Entrada</h3>
+      <input id="stake" type="number" placeholder="Stake">
+      <input id="odd" type="number" step="0.01" placeholder="Odd">
+      <select id="resultado">
+        <option value="win">Win</option>
+        <option value="loss">Loss</option>
+        <option value="halfwin">Half Win</option>
+        <option value="halfloss">Half Loss</option>
+        <option value="void">Void</option>
+      </select>
+      <button onclick="salvarEntrada()">Salvar</button>
+
+      <h3>Histórico</h3>
+      <ul id="historico"></ul>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

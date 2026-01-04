@@ -1,0 +1,21 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+  padding: 20px;
+}
+.hidden {
+  display: none;
+}
+input, select, button {
+  display: block;
+  margin: 8px 0;
+  padding: 8px;
+  width: 100%;
+}
+button {
+  background: #4a69bd;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
